@@ -17,7 +17,7 @@ html,body,.container,.swiper-container{ height:100%;}
 .bg_circle img{ animation:bgMove 5s infinite linear 1s; -webkit-animation:bgMove 5s infinite linear 1s;}
 .arrow{ position:absolute; z-index:99; left:50%; margin-left:-18px; bottom:27px; width:36px; height:36px; background:url(../images/arrow.png) no-repeat; -webkit-background-size:100% 100%; animation:upArrow 1.5s ease-in-out infinite; -webkit-animation:upArrow 1.5s ease-in-out infinite;}
 .title_box{ position:relative; width:92%; margin:6% auto 0;}
-.title_txt{ margin-bottom:-3%; transform:scale(0); -webkit-transform:scale(0);}
+.title_txt{ transform:scale(0); -webkit-transform:scale(0);}
 .title_txt img{ transform:translateY(-14%);}
 .title_bor{ position:absolute; top:0; width:100%; height:100%;}
 .bor_t_l,.bor_t_r{ position:absolute; width:0; height:1px; background-color:#705aa5;}

@@ -9,9 +9,14 @@
 <script src="res/js/jquery-1.8.2.min.js"></script>
 <script src="res/js/swiper.min.js"></script>
 </head>
-
+<script>
+//文件资源，预加载用
+var imgHash=['res/images/arrow.png','res/images/bg.png','res/images/bg_circle.png','res/images/bg_person.png','res/images/circle.png','res/images/loading.png','res/images/logo.png','res/images/s1_title.png','res/images/s2_dot.png','res/images/s2_title.png','res/images/s2_txt1.png','res/images/s2_txt2.png','res/images/s2_txt3.png','res/images/s2_txt4.png','res/images/s2_txt5.png','res/images/s3_pic.png','res/images/s3_title.png','res/images/s4_pic.png','res/images/s4_pic_pointer.png','res/images/s4_title.png','res/images/s5_pic.png','res/images/magnify_icon.png','res/images/s5_txt.png','res/images/s6_ewm.png','res/images/s6_txt.png','res/images/voice.png','res/images/voice_off.png','res/music/music.mp3'];
+</script>
 <body>
 	<div class="container">
+    	<div id="loading" class="loading"><i></i><div class="per"></div></div>
+    	<div class="music_box"><div class="music_icon"></div><audio id="music" autoplay="autoplay" src="res/music/music.mp3"></audio></div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide1">
@@ -96,19 +101,56 @@
         </div>
     </div>
     <script>
-		var mySwiper=new Swiper('.swiper-container',{
-			slideActiveClass:'active',
-			nextButton:'.arrow',
-			direction:'vertical',
-			initialSlide:0
+		//图片预加载
+		$(function(){
+			function loadSource(hash,callback){
+				var totalLen=imgHash.length,
+					doneLen=0,
+					per=0;
+				for(i=0;i<imgHash.length;i++){
+					(function(){
+						var img=new Image();
+						img.src=imgHash[i];
+						img.onload=img.onerror=function(){
+							doneLen++;
+							per=parseInt(doneLen/totalLen*100);
+							$(".loading .per").html(per+"%");
+							if(doneLen>=totalLen){
+								callback();
+							}
+						}
+					})();
+				}
+			}
+			loadSource(imgHash,run);
 		});
-		window.onload=window.onresize=function(){
-			var winW = $('body').width();
-			var winH = $('body').height();
-			var h=winH-(winW*(234+0.15*750)/750+46);
-			$(".s2_txtline").height(h);
-			$(".s5_icon").height($(".circle").height());
-			$(".s6_txt img").width(winW);
+		function run(){
+			$('.loading').animate({
+				opacity: 0
+			}, 1000, function() {
+				$(this).remove();
+			});
+			var musicFlag = true;
+			$('.music_box').click(function(){
+				$('.music_icon').toggleClass("off");
+				if(musicFlag){music.pause();}
+				else(music.play())
+				musicFlag = !musicFlag;
+			});
+			var mySwiper=new Swiper('.swiper-container',{
+				slideActiveClass:'active',
+				nextButton:'.arrow',
+				direction:'vertical',
+				initialSlide:0
+			});
+			window.onload=window.onresize=function(){
+				var winW = $('body').width();
+				var winH = $('body').height();
+				var h=winH-(winW*(234+0.15*750)/750+46);
+				$(".s2_txtline").height(h);
+				$(".s5_icon").height($(".circle").height());
+				$(".s6_txt img").width(winW);
+			}
 		}
     </script>
 </body>

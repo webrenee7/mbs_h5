@@ -13,7 +13,7 @@ html,body,.container,.swiper-container{ height:100%;}
 .swiper-container{ background:url(../images/bg_person.png) no-repeat bottom; -webkit-background-size:100% auto;}
 .logo{ width:21%; padding:9% 0 0 5%;}
 .bg_circle{ position:absolute; right:0; top:0; width:46%;}
-.circle{ position:absolute; left:0; top:13%; transform:scale(1); -webkit-transform:scale(1);}
+.circle{ position:absolute; left:0; top:13%;}
 .bg_circle img{ animation:bgMove 5s infinite linear 1s; -webkit-animation:bgMove 5s infinite linear 1s;}
 .arrow{ position:absolute; z-index:99; left:50%; margin-left:-18px; bottom:27px; width:36px; height:36px; background:url(../images/arrow.png) no-repeat; -webkit-background-size:100% 100%; animation:upArrow 1.5s ease-in-out infinite; -webkit-animation:upArrow 1.5s ease-in-out infinite;}
 .title_box{ position:relative; width:92%; margin:6% auto 0;}
@@ -41,11 +41,11 @@ html,body,.container,.swiper-container{ height:100%;}
 
 /*s1*/
 .slide1 .bg_circle{ animation:bounceInDown 1s; -webkit-animation:bounceInDown 1s;}
-.slide1 .circle{ transform:scale(0) rotate(0); -webkit-transform:scale(0) rotate(0);}
+.slide1 .circle{ transform:scale(0) rotate(0) translateZ(0); -webkit-transform:scale(0) rotate(0) translateZ(0);}
 .s1_title{ position:absolute; left:4%; top:0; width:92%; transform:translateY(-100%); -webkit-transform:translateY(-100%);}
 .s1_txt{ position:absolute; left:14%; bottom:0; width:72%; transform:translateY(100%); -webkit-transform:translateY(100%);}
 /*s1.active*/
-.slide1.active .circle{ transform:scale(1) rotate(720deg); -webkit-transform:scale(1) rotate(720deg); transition:1.8s 0.5s; -webkit-transition:1.8s 0.5s; animation:Rotate 2s linear 3s infinite; -webkit-animation:Rotate 2s linear 3s infinite;}
+.slide1.active .circle{ transform:scale(1) rotate(720deg) translateZ(0); -webkit-transform:scale(1) rotate(720deg) translateZ(0); transition:1.8s 0.5s; -webkit-transition:1.8s 0.5s; animation:Rotate 2s linear 3s infinite; -webkit-animation:Rotate 2s linear 3s infinite;}
 .slide1.active .s1_title{ top:32%; transform:translateY(0); -webkit-transform:translateY(0); transition:0.5s ease-in-out 2s; -webkit-transition:0.5s ease-in-out 2s; animation:bounceInDown 1s 2s; -webkit-animation:bounceInDown 1s 2s;}
 .slide1.active .s1_txt{ bottom:15%;transform:translateY(0); -webkit-transform:translateY(0); transition:1s 1.5s; -webkit-transition:1s 1.5s;}
 @keyframes upArrow{
@@ -86,12 +86,12 @@ html,body,.container,.swiper-container{ height:100%;}
 }
 
 @keyframes Rotate{
-	from { transform:rotate(0)}
-	to { transform:rotate(360deg);}
+	from { transform:rotate(0) translateZ(0);}
+	to { transform:rotate(360deg) translateZ(0);}
 }
 @-webkit-keyframes Rotate{
-	from { -webkit-transform:rotate(0)}
-	to { -webkit-transform:rotate(360deg);}
+	from { -webkit-transform:rotate(0) translateZ(0)}
+	to { -webkit-transform:rotate(360deg) translateZ(0);}
 }
 
 
@@ -150,7 +150,7 @@ html,body,.container,.swiper-container{ height:100%;}
 .slide4 .title_box{ position:absolute; left:12%; top:23%; width:76%; margin:0; padding-bottom:3%;}
 .s4_pic{ position:absolute; left:19%; top:43%; width:62%; transform:scale(0); -webkit-transform:scale(0); opacity:0;}
 .s4_pic .pic_pointer{ position:absolute; left:0; top:0;}
-.s4_pic .pic_pointer{ transform:rotate(0); -webkit-transform:rotate(0);}
+.s4_pic .pic_pointer{ transform:rotate(0) translateZ(0); -webkit-transform:rotate(0) translateZ(0);}
 .s4_icon,.s4_txt{ position:absolute; left:0; top:0; width:100%; height:100%;}
 .s4_icon div{ position:absolute; width:16%;}
 .s4_icon1{ left:12%; top:2%;}
@@ -169,19 +169,19 @@ html,body,.container,.swiper-container{ height:100%;}
 .slide4.active .s4_icon,.slide4.active .s4_txt{ animation:Rotate 5s linear infinite 4.5s; -webkit-animation:Rotate 5s linear infinite 4.5s;}
 .slide4.active .s4_icon1,.slide4.active .s4_icon2,.slide4.active .s4_txt1,.slide4.active .s4_txt2{ animation:fRotate 5s linear infinite 4.5s; -webkit-animation:fRotate 5s linear infinite 4.5s;}
 @keyframes fRotate{
-	from { transform:rotate(0);}
-	to { transform:rotate(-360deg);}
+	from { transform:rotate(0) translateZ(0);}
+	to { transform:rotate(-360deg) translateZ(0);}
 }
 @-webkit-keyframes fRotate{
-	from { -webkit-transform:rotate(0);}
-	to { -webkit-transform:rotate(-360deg);}
+	from { -webkit-transform:rotate(0) translateZ(0);}
+	to { -webkit-transform:rotate(-360deg) translateZ(0);}
 }
 
 
 /*s5*/
 .slide5 .circle{ top:18%;}
-.s5_icon{ position:absolute; left:0; top:18%; width:100%; transform:rotate(0); -webkit-transform:rotate(0);}
-.s5_icon_box{ position:absolute; right:7%; top:47%; width:17%; transform:rotate(0); -webkit-transform:rotate(0);}
+.s5_icon{ position:absolute; left:0; top:18%; width:100%; transform:rotate(0) translateZ(0); -webkit-transform:rotate(0) translateZ(0);}
+.s5_icon_box{ position:absolute; right:7%; top:47%; width:17%; transform:rotate(0) translateZ(0); -webkit-transform:rotate(0) translateZ(0);}
 .s5_pic{ position:absolute; left:31%; top:0; width:38%; transform:translateY(-100%); -webkit-transform:translateY(-100%);}
 
 /*s5.active*/

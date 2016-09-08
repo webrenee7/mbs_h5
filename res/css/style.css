@@ -45,9 +45,9 @@ html,body,.container,.swiper-container{ height:100%;}
 .s1_title{ position:absolute; left:4%; top:0; width:92%; transform:translateY(-100%); -webkit-transform:translateY(-100%);}
 .s1_txt{ position:absolute; left:14%; bottom:0; width:72%; transform:translateY(100%); -webkit-transform:translateY(100%);}
 /*s1.active*/
-.slide1.active .circle{ transform:scale(1) rotate(720deg); -webkit-transform:scale(1) rotate(720deg); transition:1.8s 0.5s; -webkit-transition:1.8s 0.5s; animation:Rotate 2s linear 3s infinite; -webkit-animation:Rotate 2s linear 3s infinite;}
-.slide1.active .s1_title{ top:32%; transform:translateY(0); -webkit-transform:translateY(0); transition:0.5s ease-in-out 2s; -webkit-transition:0.5s ease-in-out 2s; animation:bounceInDown 1s 2s; -webkit-animation:bounceInDown 1s 2s;}
-.slide1.active .s1_txt{ bottom:15%;transform:translateY(0); -webkit-transform:translateY(0); transition:1s 1.5s; -webkit-transition:1s 1.5s;}
+.slide1.active .circle{ transform:scale(1) rotate(720deg); -webkit-transform:scale(1) rotate(720deg); transition:1.8s 1s; -webkit-transition:1.8s 1s; animation:Rotate 2s linear 3s infinite; -webkit-animation:Rotate 2s linear 3s infinite;}
+.slide1.active .s1_title{ top:32%; transform:translateY(0); -webkit-transform:translateY(0); transition:0.5s ease-in-out 1.5s; -webkit-transition:0.5s ease-in-out 1.5s; animation:bounceInDown 1s 1.5s; -webkit-animation:bounceInDown 1s 1.5s;}
+.slide1.active .s1_txt{ bottom:15%;transform:translateY(0); -webkit-transform:translateY(0); transition:1s 2s; -webkit-transition:1s 2s;}
 @keyframes upArrow{
 	0% { transform:translate(0,0);}
 	50% { transform:translate(0,10px);}

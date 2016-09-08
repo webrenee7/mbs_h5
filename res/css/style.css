@@ -4,6 +4,7 @@
 body{ position:relative; max-width:640px; min-width:320px; margin:0 auto; font:12px/24px "Microsoft YaHei","微软雅黑";}
 *{ margin:0; padding:0;}
 img{ width:100%; border:medium none; vertical-align:middle;}
+*{ outline:1px solid transparent;}
 
 
 /*common*/

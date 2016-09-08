@@ -18,7 +18,7 @@ html,body,.container,.swiper-container{ height:100%;}
 .arrow{ position:absolute; z-index:99; left:50%; margin-left:-18px; bottom:27px; width:36px; height:36px; background:url(../images/arrow.png) no-repeat; -webkit-background-size:100% 100%; animation:upArrow 1.5s ease-in-out infinite; -webkit-animation:upArrow 1.5s ease-in-out infinite;}
 .title_box{ position:relative; width:92%; margin:6% auto 0;}
 .title_txt{ transform:scale(0); -webkit-transform:scale(0);}
-.title_txt img{ transform:translateY(-13px);}
+.title_txt img{ transform:translateY(-14%);}
 .title_bor{ position:absolute; top:0; width:100%; height:86%;}
 .bor_t_l,.bor_t_r{ position:absolute; width:0; height:1px; background-color:#705aa5;}
 .bor_t_l{ right:73%;}
@@ -41,13 +41,13 @@ html,body,.container,.swiper-container{ height:100%;}
 
 /*s1*/
 .slide1 .bg_circle{ animation:bounceInDown 1s; -webkit-animation:bounceInDown 1s;}
-.slide1 .circle{ transform:scale(0) rotate(0); -webkit-transform:scale(0) rotate(0);}
+.slide1 .circle{ transform:scale(0); -webkit-transform:scale(0);}
 .s1_title{ position:absolute; left:4%; top:0; width:92%; transform:translateY(-100%); -webkit-transform:translateY(-100%);}
 .s1_txt{ position:absolute; left:14%; bottom:0; width:72%; transform:translateY(100%); -webkit-transform:translateY(100%);}
 /*s1.active*/
-.slide1.active .circle{ transform:scale(1) rotate(720deg); -webkit-transform:scale(1) rotate(720deg); transition:1.8s 6s; -webkit-transition:1.8s 6s; animation:Rotate 2s linear 3s infinite; -webkit-animation:Rotate 2s linear 3s infinite;}
-.slide1.active .s1_title{ top:32%; transform:translateY(0); -webkit-transform:translateY(0); transition:0.5s ease-in-out 1.5s; -webkit-transition:0.5s ease-in-out 1.5s; animation:bounceInDown 1s 1.5s; -webkit-animation:bounceInDown 1s 1.5s;}
-.slide1.active .s1_txt{ bottom:15%;transform:translateY(0); -webkit-transform:translateY(0); transition:1s 2s; -webkit-transition:1s 2s;}
+.slide1.active .circle{ transform:scale(1); -webkit-transform:scale(1); transition:1.8s 0.5s; -webkit-transition:1.8s 0.5s; }
+.slide1.active .s1_title{ top:32%; transform:translateY(0); -webkit-transform:translateY(0); transition:0.5s ease-in-out 2s; -webkit-transition:0.5s ease-in-out 2s; animation:bounceInDown 1s 2s; -webkit-animation:bounceInDown 1s 2s;}
+.slide1.active .s1_txt{ bottom:15%;transform:translateY(0); -webkit-transform:translateY(0); transition:1s 1.5s; -webkit-transition:1s 1.5s;}
 @keyframes upArrow{
 	0% { transform:translate(0,0);}
 	50% { transform:translate(0,10px);}

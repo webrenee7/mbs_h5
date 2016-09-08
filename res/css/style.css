@@ -2,9 +2,8 @@
 /* CSS Document */
 
 body{ position:relative; max-width:640px; min-width:320px; margin:0 auto; font:12px/24px "Microsoft YaHei","微软雅黑";}
-*{ margin:0; padding:0;}
+*{ margin:0; padding:0;-webkit-transform: translate3d(0, 0, 0);-moz-transform: translate3d(0, 0, 0);-ms-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);-webkit-backface-visibility: hidden;-moz-backface-visibility: hidden;-ms-backface-visibility: hidden;backface-visibility: hidden;-webkit-perspective: 1000;-moz-perspective: 1000;-ms-perspective: 1000;perspective: 1000;}
 img{ width:100%; border:medium none; vertical-align:middle;}
-*{ transform:translateZ(0); -webkit-transform:translateZ(0);outline:1px solid transparent; overflow:hidden;}
 
 
 /*common*/
@@ -42,11 +41,11 @@ html,body,.container,.swiper-container{ height:100%;}
 
 /*s1*/
 .slide1 .bg_circle{ animation:bounceInDown 1s; -webkit-animation:bounceInDown 1s;}
-.slide1 .circle{ transform:scale(0) rotate(0) translateZ(0); -webkit-transform:scale(0) rotate(0) translateZ(0);overflow:hidden; outline:1px solid transparent;}
+.slide1 .circle{ transform:scale(0) rotate(0); -webkit-transform:scale(0) rotate(0);}
 .s1_title{ position:absolute; left:4%; top:0; width:92%; transform:translateY(-100%); -webkit-transform:translateY(-100%);}
 .s1_txt{ position:absolute; left:14%; bottom:0; width:72%; transform:translateY(100%); -webkit-transform:translateY(100%);}
 /*s1.active*/
-.slide1.active .circle{ transform:scale(1) rotate(720deg) translateZ(0); -webkit-transform:scale(1) rotate(720deg) translateZ(0); transition:1.8s 0.5s; -webkit-transition:1.8s 0.5s; animation:Rotate 2s linear 3s infinite; -webkit-animation:Rotate 2s linear 3s infinite;}
+.slide1.active .circle{ transform:scale(1) rotate(720deg); -webkit-transform:scale(1) rotate(720deg); transition:1.8s 0.5s; -webkit-transition:1.8s 0.5s; animation:Rotate 2s linear 3s infinite; -webkit-animation:Rotate 2s linear 3s infinite;}
 .slide1.active .s1_title{ top:32%; transform:translateY(0); -webkit-transform:translateY(0); transition:0.5s ease-in-out 2s; -webkit-transition:0.5s ease-in-out 2s; animation:bounceInDown 1s 2s; -webkit-animation:bounceInDown 1s 2s;}
 .slide1.active .s1_txt{ bottom:15%;transform:translateY(0); -webkit-transform:translateY(0); transition:1s 1.5s; -webkit-transition:1s 1.5s;}
 @keyframes upArrow{
@@ -87,12 +86,12 @@ html,body,.container,.swiper-container{ height:100%;}
 }
 
 @keyframes Rotate{
-	from { transform:rotate(0) translateZ(0);}
-	to { transform:rotate(360deg) translateZ(0);}
+	from { transform:rotate(0)}
+	to { transform:rotate(360deg);}
 }
 @-webkit-keyframes Rotate{
-	from { -webkit-transform:rotate(0) translateZ(0)}
-	to { -webkit-transform:rotate(360deg) translateZ(0);}
+	from { -webkit-transform:rotate(0)}
+	to { -webkit-transform:rotate(360deg);}
 }
 
 
@@ -113,7 +112,7 @@ html,body,.container,.swiper-container{ height:100%;}
 /*s2.active*/
 .slide2.active .title_txt{ margin-bottom:0; transform:scale(1); -webkit-transform:scale(1); transition:1s; -webkit-transition:1s;}
 .slide2.active .s2_line{ height:100%; transition:2.5s linear 1s; -webkit-transition:3s linear 1s;}
-.slide2.active .s2_txt div{ opacity:1; overflow:hidden; outline:1px solid transparent;}
+.slide2.active .s2_txt div{ opacity:1;}
 .slide2.active .s2_txt span{ transform:scale(1); -webkit-transform:scale(1);}
 .slide2.active .s2_txt1,.slide2.active .s2_txt1 span{ transition:0.5s 1.5s; -webkit-transition:0.5s 1.5s;}
 .slide2.active .s2_txt2,.slide2.active .s2_txt2 span{ transition:0.5s 2s; -webkit-transition:0.5s 2s;}
@@ -151,7 +150,7 @@ html,body,.container,.swiper-container{ height:100%;}
 .slide4 .title_box{ position:absolute; left:12%; top:23%; width:76%; margin:0; padding-bottom:3%;}
 .s4_pic{ position:absolute; left:19%; top:43%; width:62%; transform:scale(0); -webkit-transform:scale(0); opacity:0;}
 .s4_pic .pic_pointer{ position:absolute; left:0; top:0;}
-.s4_pic .pic_pointer{ transform:rotate(0) translateZ(0); -webkit-transform:rotate(0) translateZ(0);}
+.s4_pic .pic_pointer{ transform:rotate(0); -webkit-transform:rotate(0);}
 .s4_icon,.s4_txt{ position:absolute; left:0; top:0; width:100%; height:100%;}
 .s4_icon div{ position:absolute; width:16%;}
 .s4_icon1{ left:12%; top:2%;}
@@ -170,19 +169,19 @@ html,body,.container,.swiper-container{ height:100%;}
 .slide4.active .s4_icon,.slide4.active .s4_txt{ animation:Rotate 5s linear infinite 4.5s; -webkit-animation:Rotate 5s linear infinite 4.5s;}
 .slide4.active .s4_icon1,.slide4.active .s4_icon2,.slide4.active .s4_txt1,.slide4.active .s4_txt2{ animation:fRotate 5s linear infinite 4.5s; -webkit-animation:fRotate 5s linear infinite 4.5s;}
 @keyframes fRotate{
-	from { transform:rotate(0) translateZ(0);}
-	to { transform:rotate(-360deg) translateZ(0);}
+	from { transform:rotate(0);}
+	to { transform:rotate(-360deg);}
 }
 @-webkit-keyframes fRotate{
-	from { -webkit-transform:rotate(0) translateZ(0);}
-	to { -webkit-transform:rotate(-360deg) translateZ(0);}
+	from { -webkit-transform:rotate(0);}
+	to { -webkit-transform:rotate(-360deg);}
 }
 
 
 /*s5*/
 .slide5 .circle{ top:18%;}
-.s5_icon{ position:absolute; left:0; top:18%; width:100%; transform:rotate(0) translateZ(0); -webkit-transform:rotate(0) translateZ(0);}
-.s5_icon_box{ position:absolute; right:7%; top:47%; width:17%; transform:rotate(0) translateZ(0); -webkit-transform:rotate(0) translateZ(0);}
+.s5_icon{ position:absolute; left:0; top:18%; width:100%; transform:rotate(0); -webkit-transform:rotate(0);}
+.s5_icon_box{ position:absolute; right:7%; top:47%; width:17%; transform:rotate(0); -webkit-transform:rotate(0);}
 .s5_pic{ position:absolute; left:31%; top:0; width:38%; transform:translateY(-100%); -webkit-transform:translateY(-100%);}
 
 /*s5.active*/

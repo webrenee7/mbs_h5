@@ -4,7 +4,7 @@
 body{ position:relative; max-width:640px; min-width:320px; margin:0 auto; font:12px/24px "Microsoft YaHei","微软雅黑";}
 *{ margin:0; padding:0;}
 img{ width:100%; border:medium none; vertical-align:middle;}
-*{ outline:1px solid transparent;}
+*{ transform:translateZ(0); -webkit-transform:translateZ(0);outline:1px solid transparent; overflow:hidden;}
 
 
 /*common*/
@@ -42,7 +42,7 @@ html,body,.container,.swiper-container{ height:100%;}
 
 /*s1*/
 .slide1 .bg_circle{ animation:bounceInDown 1s; -webkit-animation:bounceInDown 1s;}
-.slide1 .circle{ transform:scale(0) rotate(0) translateZ(0); -webkit-transform:scale(0) rotate(0) translateZ(0);}
+.slide1 .circle{ transform:scale(0) rotate(0) translateZ(0); -webkit-transform:scale(0) rotate(0) translateZ(0);overflow:hidden; outline:1px solid transparent;}
 .s1_title{ position:absolute; left:4%; top:0; width:92%; transform:translateY(-100%); -webkit-transform:translateY(-100%);}
 .s1_txt{ position:absolute; left:14%; bottom:0; width:72%; transform:translateY(100%); -webkit-transform:translateY(100%);}
 /*s1.active*/
@@ -113,7 +113,7 @@ html,body,.container,.swiper-container{ height:100%;}
 /*s2.active*/
 .slide2.active .title_txt{ margin-bottom:0; transform:scale(1); -webkit-transform:scale(1); transition:1s; -webkit-transition:1s;}
 .slide2.active .s2_line{ height:100%; transition:2.5s linear 1s; -webkit-transition:3s linear 1s;}
-.slide2.active .s2_txt div{ opacity:1;}
+.slide2.active .s2_txt div{ opacity:1; overflow:hidden; outline:1px solid transparent;}
 .slide2.active .s2_txt span{ transform:scale(1); -webkit-transform:scale(1);}
 .slide2.active .s2_txt1,.slide2.active .s2_txt1 span{ transition:0.5s 1.5s; -webkit-transition:0.5s 1.5s;}
 .slide2.active .s2_txt2,.slide2.active .s2_txt2 span{ transition:0.5s 2s; -webkit-transition:0.5s 2s;}

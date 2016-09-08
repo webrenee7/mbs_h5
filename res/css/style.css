@@ -13,7 +13,7 @@ html,body,.container,.swiper-container{ height:100%;}
 .swiper-container{ background:url(../images/bg_person.png) no-repeat bottom; -webkit-background-size:100% auto;}
 .logo{ width:21%; padding:9% 0 0 5%;}
 .bg_circle{ position:absolute; right:0; top:0; width:46%;}
-.circle{ position:absolute; left:0; top:13%;}
+.circle{ position:absolute; left:0; top:13%; transform:scale(1); -webkit-transform:scale(1);}
 .bg_circle img{ animation:bgMove 5s infinite linear 1s; -webkit-animation:bgMove 5s infinite linear 1s;}
 .arrow{ position:absolute; z-index:99; left:50%; margin-left:-18px; bottom:27px; width:36px; height:36px; background:url(../images/arrow.png) no-repeat; -webkit-background-size:100% 100%; animation:upArrow 1.5s ease-in-out infinite; -webkit-animation:upArrow 1.5s ease-in-out infinite;}
 .title_box{ position:relative; width:92%; margin:6% auto 0;}

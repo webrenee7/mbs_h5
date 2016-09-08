@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-<title>默博士</title>
+<title>默博士2.0强势来袭</title>
 <link rel="stylesheet" type="text/css" href="res/css/style.css" />
 <link rel="stylesheet" type="text/css" href="res/css/swiper.min.css" />
 <script src="res/js/jquery-1.8.2.min.js"></script>
@@ -11,12 +11,11 @@
 </head>
 <script>
 //文件资源，预加载用
-var imgHash=['res/images/arrow.png','res/images/bg.png','res/images/bg_circle.png','res/images/bg_person.png','res/images/circle.png','res/images/loading.png','res/images/logo.png','res/images/s1_title.png','res/images/s2_dot.png','res/images/s2_title.png','res/images/s2_txt1.png','res/images/s2_txt2.png','res/images/s2_txt3.png','res/images/s2_txt4.png','res/images/s2_txt5.png','res/images/s3_pic.png','res/images/s3_title.png','res/images/s4_pic.png','res/images/s4_pic_pointer.png','res/images/s4_title.png','res/images/s5_pic.png','res/images/magnify_icon.png','res/images/s5_txt.png','res/images/s6_ewm.png','res/images/s6_txt.png','res/images/voice.png','res/images/voice_off.png','res/music/music.mp3'];
+var imgHash=['res/images/arrow.png','res/images/bg.png','res/images/bg_circle.png','res/images/bg_person.png','res/images/circle.png','res/images/loading.png','res/images/logo.png','res/images/magnify_icon.png','res/images/s1_title.png','res/images/s1_txt.png','res/images/s2_dot.png','res/images/s2_title.png','res/images/s2_txt1.png','res/images/s2_txt2.png','res/images/s2_txt3.png','res/images/s2_txt4.png','res/images/s2_txt5.png','res/images/s3_pic.png','res/images/s3_title.png','res/images/s4_icon1.png','res/images/s4_icon2.png','res/images/s4_pic.png','res/images/s4_pic_pointer.png','res/images/s4_title.png','res/images/s4_txt1.png','res/images/s4_txt2.png','res/images/s5_pic.png','res/images/s6_ewm.png','res/images/s6_txt.png','res/images/voice.png','res/images/voice_off.png','res/music/music.mp3'];
 </script>
 <body>
-	<div class="container">
+	<div class="container">	
     	<div id="loading" class="loading"><i></i><div class="per"></div></div>
-    	<div class="music_box"><div class="music_icon"></div><audio id="music" autoplay="autoplay" src="res/music/music.mp3"></audio></div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide slide1">
@@ -24,19 +23,13 @@ var imgHash=['res/images/arrow.png','res/images/bg.png','res/images/bg_circle.pn
                     <div class="bg_circle"><img src="res/images/bg_circle.png" /></div>
                     <div class="circle"><img src="res/images/circle.png" /></div>
                     <div class="s1_title"><img src="res/images/s1_title.png" /></div>
+                    <div class="s1_txt"><img src="res/images/s1_txt.png" /></div>
                 </div>
                 <div class="swiper-slide slide2">
                 	<div class="logo"><img src="res/images/logo.png" /></div>
                     <div class="bg_circle"><img src="res/images/bg_circle.png" /></div>
                     <div class="title_box">
                     	<div class="title_txt"><img src="res/images/s2_title.png" /></div>
-                        <div class="title_bor">
-                        	<div class="bor_t_l"></div>
-                            <div class="bor_t_r"></div>
-                            <div class="bor_c"></div>
-                            <div class="bor_b_l"></div>
-                            <div class="bor_b_r"></div>
-                        </div>
                     </div>
                     <div class="s2_txtline">
                     	<div class="s2_line"></div>
@@ -79,7 +72,15 @@ var imgHash=['res/images/arrow.png','res/images/bg.png','res/images/bg_circle.pn
                     </div>
                     <div class="s4_pic">
                     	<img src="res/images/s4_pic.png" />
-                        <img src="res/images/s4_pic_pointer.png" class="pic_pointer" />
+                        <img src="res/images/s4_pic_pointer.png" class="pic_pointer" /> 
+                        <div class="s4_icon">
+                            <div class="s4_icon1"><img src="res/images/s4_icon1.png" /></div>
+                            <div class="s4_icon2"><img src="res/images/s4_icon2.png" /></div>
+                        </div>
+                        <div class="s4_txt">
+                            <div class="s4_txt1"><img src="res/images/s4_txt1.png" /></div>
+                            <div class="s4_txt2"><img src="res/images/s4_txt2.png" /></div>
+                        </div> 
                     </div>
                 </div>
                 <div class="swiper-slide slide5">
@@ -89,7 +90,6 @@ var imgHash=['res/images/arrow.png','res/images/bg.png','res/images/bg_circle.pn
                     	<div class="s5_icon_box"><img src="res/images/magnify_icon.png" /></div>
                     </div>
                     <div class="s5_pic"><img src="res/images/s5_pic.png" /></div>
-                    <div class="s5_txt"><img src="res/images/s5_txt.png" /></div>
                 </div>
                 <div class="swiper-slide slide6">
                 	<div class="logo"><img src="res/images/logo.png" /></div>
@@ -98,6 +98,7 @@ var imgHash=['res/images/arrow.png','res/images/bg.png','res/images/bg_circle.pn
                 </div>
             </div>
             <div class="arrow"></div>
+            <div class="music_box"><div class="music_icon"></div><audio id="music" autoplay="autoplay" loop="loop" src="res/music/music.mp3"></audio></div>
         </div>
     </div>
     <script>
@@ -146,7 +147,7 @@ var imgHash=['res/images/arrow.png','res/images/bg.png','res/images/bg_circle.pn
 			window.onload=window.onresize=function(){
 				var winW = $('body').width();
 				var winH = $('body').height();
-				var h=winH-(winW*(234+0.15*750)/750+46);
+				var h=winH-(winW*(145+0.15*750)/750+71);
 				$(".s2_txtline").height(h);
 				$(".s5_icon").height($(".circle").height());
 				$(".s6_txt img").width(winW);

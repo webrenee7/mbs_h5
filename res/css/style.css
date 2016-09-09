@@ -41,13 +41,11 @@ html,body,.container,.swiper-container{ height:100%;}
 
 /*s1*/
 .slide1 .bg_circle{ animation:bounceInDown 1s; -webkit-animation:bounceInDown 1s;}
-.slide1 .circle{ transform:scale3d(0,0,0); -webkit-transform:scale3d(0,0,0);}
-.slide1 .circle img{ transform:rotateZ(0); -webkit-transform:rotateZ(0);}
+.slide1 .circle{ transform:scale3d(0,0,0) rotateZ(0); -webkit-transform:scale3d(0,0,0) rotateZ(0);}
 .s1_title{ position:absolute; left:4%; top:0; width:92%; transform:translateY(-100%); -webkit-transform:translateY(-100%);}
 .s1_txt{ position:absolute; left:14%; bottom:0; width:72%; transform:translateY(100%); -webkit-transform:translateY(100%);}
 /*s1.active*/
-.slide1.active .circle{ transform:scale3d(1,1,1); -webkit-transform:scale3d(1,1,1); transition:all 1.8s 0.5s; -webkit-transition:all 1.8s 0.5s; animation:Rotate 2s linear 3s infinite; -webkit-animation:Rotate 2s linear 3s infinite;}
-.slide1.active .circle img{ transform:rotateZ(720deg); -webkit-transform:rotateZ(720deg); transition:2s 0.5s;-webkit-transition:2s 0.5s;}
+.slide1.active .circle{ transform:scale3d(1,1,1) rotateZ(720deg); -webkit-transform:scale3d(1,1,1) rotateZ(720deg); transition:all 1.8s 0.5s; -webkit-transition:all 1.8s 0.5s; animation:Rotate 2s linear 3s infinite; -webkit-animation:Rotate 2s linear 3s infinite;}
 .slide1.active .s1_title{ top:32%; transform:translateY(0); -webkit-transform:translateY(0); transition:0.5s ease-in-out 2s; -webkit-transition:0.5s ease-in-out 2s; animation:bounceInDown 1s 2s; -webkit-animation:bounceInDown 1s 2s;}
 .slide1.active .s1_txt{ bottom:15%;transform:translateY(0); -webkit-transform:translateY(0); transition:1s 1.5s; -webkit-transition:1s 1.5s;}
 @keyframes upArrow{
